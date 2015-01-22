@@ -19,8 +19,8 @@ extern "C"
 #define DCAN_BIT_RATE                     (1000000u)
 #define CAN_TX_MSG_EXTD_ID                (0x1000u)
   //*******server part*******
-#define CAN_TX_MSG_STD_ID                 (0x03u)
-#define CAN_RX_MSG_STD_ID                 (0x02u)
+//#define CAN_TX_MSG_STD_ID                 (0x03u)
+//#define CAN_RX_MSG_STD_ID                 (0x02u)
   //**************
 
   //*******client part*******

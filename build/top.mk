@@ -39,6 +39,8 @@ main:	$(O_FILES)
 
 %.dtbo : %.dts
 	$(DTC) -@ -O dtb -o $@ $<
+	cp *.dtbo $(BUILD_DIR)
+	rm *.dtbo
 
 .PHONY	: clean all
 clean	:
