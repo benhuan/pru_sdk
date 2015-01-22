@@ -1,10 +1,10 @@
 C_FILES := host_main.c ../common/mio.c
-DTS_FILES := pru_enable-00A0.dtsi
+DTS_FILES := pru_enable-00A0.dts
 C_FLAGS := -DSTART_ADDR=$(START_ADDR)
 
 PRU_SDK_DIR ?= $(shell pwd)/../..
 
-CROSS_COMPILE ?= /opt/gcc-linaro-arm-linux-gnueabihf-4.7-2013.03-20130313_linux/bin/arm-linux-gnueabihf-
+CROSS_COMPILE ?= arm-linux-gnueabihf-
 
 CC := $(CROSS_COMPILE)gcc
 LD := $(CROSS_COMPILE)gcc
@@ -20,7 +20,7 @@ L_LIBS += -lprussdrv
 
 BIN_FILES := $(P_FILES:.p=.bin)
 O_FILES := $(C_FILES:.c=.o)
-DTBO_FILES := $(DTS_FILES:.dtsi=.dtbo)
+DTBO_FILES := $(DTS_FILES:.dts=.dtbo)
 
 BUILD_DIR = build
 
@@ -37,7 +37,7 @@ main:	$(O_FILES)
 %.o : %.c
 	$(CC) $(C_FLAGS) -c -o $@ $<
 
-%.dtbo : %.dtsi
+%.dtbo : %.dts
 	$(DTC) -@ -O dtb -o $@ $<
 
 .PHONY	: clean all
