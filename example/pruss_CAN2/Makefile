@@ -1,5 +1,5 @@
 ################### PRU building #######################
-PRU_CGT_DIR = /opt/PRU/ti-cgt-pru_2.1.0
+PRU_CGT_DIR = /home/longqi/ti/ccsv6/tools/compiler/ti-cgt-pru_2.1.1
 
 CC = ${PRU_CGT_DIR}/bin/clpru
 #DEVICE=am335x
