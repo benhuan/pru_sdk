@@ -1,5 +1,5 @@
 ################### PRU building #######################
-PRU_CGT_DIR = /home/longqi/ti/ccsv6/tools/compiler/ti-cgt-pru_2.1.1
+#PRU_CGT_DIR = /home/longqi/ti/ccsv6/tools/compiler/ti-cgt-pru_2.1.1
 
 CC = ${PRU_CGT_DIR}/bin/clpru
 #DEVICE=am335x
@@ -13,8 +13,8 @@ PRU_C_DIR=-I${PRU_CGT_DIR}/lib \
 	    -I${PRU_CGT_DIR}/include \
 	    -I${AM335X_StarterWare_PATH}/include \
 	    -I${AM335X_StarterWare_PATH}/include/hw \
-	    -I${AM335X_StarterWare_PATH}/include/arm7a \
-	    -I${AM335X_StarterWare_PATH}/include/arm7a/am335x \
+	    -I${AM335X_StarterWare_PATH}/include/armv7a \
+	    -I${AM335X_StarterWare_PATH}/include/armv7a/am335x \
 	    -I${AM335X_StarterWare_PATH}/platform/beaglebone
 
 DRIVER_DIR = ${AM335X_StarterWare_PATH}/drivers
